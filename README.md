@@ -21,7 +21,11 @@ font-family:Poppins, Arial;
 
 body{
 background:#f5f5f5;
+background-image:linear-gradient(#f5f5f5,#eeeeee);
+min-height:100vh;
 }
+
+/* HEADER */
 
 header{
 background:#ffd400;
@@ -62,6 +66,8 @@ text-decoration:none;
 font-weight:600;
 }
 
+/* BANNER */
+
 .banner{
 background:linear-gradient(90deg,#c40000,#ff2e2e);
 color:white;
@@ -70,7 +76,7 @@ text-align:center;
 }
 
 .banner h1{
-font-size:30px;
+font-size:28px;
 max-width:900px;
 margin:auto;
 margin-bottom:25px;
@@ -85,6 +91,8 @@ text-decoration:none;
 font-weight:600;
 }
 
+/* CONTAINER */
+
 .container{
 max-width:1200px;
 margin:auto;
@@ -97,6 +105,8 @@ margin-bottom:30px;
 font-size:28px;
 }
 
+/* PRODUTOS */
+
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -106,10 +116,13 @@ gap:20px;
 .product{
 background:white;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
 transition:0.2s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 .product:hover{
@@ -117,8 +130,8 @@ transform:translateY(-5px);
 }
 
 .product img{
-width:120px;
-height:120px;
+width:100%;
+height:160px;
 object-fit:contain;
 margin-bottom:10px;
 }
@@ -144,12 +157,14 @@ margin-bottom:10px;
 .buy{
 background:#25D366;
 color:white;
-padding:10px 15px;
+padding:10px;
 border:none;
 border-radius:6px;
 font-weight:600;
 cursor:pointer;
 }
+
+/* FOOTER */
 
 footer{
 background:#2b2b2b;
@@ -196,6 +211,8 @@ display:inline-block;
 margin-top:10px;
 }
 
+/* BOTÃO WHATSAPP FIXO */
+
 .whatsapp-float{
 position:fixed;
 bottom:20px;
@@ -240,7 +257,7 @@ WhatsApp
 <section class="banner">
 
 <h1>
-A Rede de Drogarias Mais Barato é especializada em preços baixos, principalmente em perfumaria e produtos de beleza.
+A Rede de Drogarias Mais Barato é especializada em preços baixos, principalmente no ramo de perfumaria e produtos de beleza. Quem conhece sabe!
 </h1>
 
 <a href="https://wa.me/5511976881196">
@@ -260,7 +277,7 @@ Fazer pedido no WhatsApp
 <img src="https://drogariasp.vteximg.com.br/arquivos/ids/1192421-1000-1000/492116-dipirona-500mg-ml-generico-gotas-Neo-Quimica-20ml.jpg.jpg">
 <div class="price">R$ 5,99</div>
 <div class="code">Cod: 7896714296074</div>
-<a href="https://wa.me/5511976881196?text=Quero%20DIPIRONA%20GOTAS%20ABACAXI">
+<a href="https://wa.me/5511976881196?text=Quero%20Dipirona%20Gotas">
 <button class="buy">Pedir no WhatsApp</button>
 </a>
 </div>
@@ -270,7 +287,7 @@ Fazer pedido no WhatsApp
 <img src="https://drogariasp.vtexassets.com/arquivos/ids/1135947-200-200/Anti-Alergico-Loratamed-10Mg-12-Comprimidos---165972_0001_Layer-1.png">
 <div class="price">R$ 11,99</div>
 <div class="code">Cod: 7896523202822</div>
-<a href="https://wa.me/5511976881196?text=Quero%20LORATAMED">
+<a href="https://wa.me/5511976881196?text=Quero%20Loratamed">
 <button class="buy">Pedir no WhatsApp</button>
 </a>
 </div>
@@ -280,7 +297,17 @@ Fazer pedido no WhatsApp
 <img src="https://drogariasp.vtexassets.com/arquivos/ids/1113365-200-200/59790---Dorflex-Analgesico-e-Relaxante-Muscular-10-comprimidos_0003_Layer-1.png">
 <div class="price">R$ 8,49</div>
 <div class="code">Cod: 7891058017392</div>
-<a href="https://wa.me/5511976881196?text=Quero%20DORFLEX">
+<a href="https://wa.me/5511976881196?text=Quero%20Dorflex">
+<button class="buy">Pedir no WhatsApp</button>
+</a>
+</div>
+
+<div class="product">
+<h3>PAPEL HIG DELUX LV12</h3>
+<img src="https://drogariasp.vtexassets.com/arquivos/ids/1299266-200-200/888516---PH-Deluxe-Cotton-1.jpg">
+<div class="price">R$ 12,99</div>
+<div class="code">Cod: 7896914011217</div>
+<a href="https://wa.me/5511976881196?text=Quero%20Papel%20Higienico">
 <button class="buy">Pedir no WhatsApp</button>
 </a>
 </div>
@@ -300,7 +327,8 @@ Fazer pedido no WhatsApp
 <p>
 Av. Dom Pedro de Alcântara, 242<br>
 Montanhão<br>
-São Bernardo do Campo - SP
+São Bernardo do Campo - SP<br>
+CEP 09784-000
 </p>
 
 <p>
@@ -319,7 +347,7 @@ Segunda a Sábado<br>
 </p>
 
 <p>
-Domingo e Feriado<br>
+Domingo e Feriados<br>
 08:00 às 14:00
 </p>
 
@@ -329,8 +357,8 @@ Domingo e Feriado<br>
 
 <h3>Localização</h3>
 
-<a class="map-btn" href="https://maps.google.com/?q=Av. Dom Pedro de Alcântara, 242 - Montanhão">
-Abrir no Maps
+<a class="map-btn" href="https://maps.google.com/?q=Av. Dom Pedro de Alcântara, 242 - Montanhão, São Bernardo do Campo">
+Abrir no Google Maps
 </a>
 
 <br>
